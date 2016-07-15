@@ -1,0 +1,17 @@
+<h2>New Todo</h2>
+
+<form action="<%= todos_url %>" method="post">
+  <%= auth_token_input %>
+
+  <label>
+    Title
+    <input type="text" name="todo[title]" value="<%= @todo.title %>" id="title">
+  </label>
+
+  <label>
+    Body
+    <input type="textarea" name="todo[url]" value="<%= @todo.url %>" id="body">
+  </label>
+
+  <input type="submit" value="Create New Todo">
+</form>

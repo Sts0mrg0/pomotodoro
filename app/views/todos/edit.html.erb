@@ -1,0 +1,19 @@
+
+<h2>Edit Todo</h2>
+
+<form action="<%= todo_url(@todo) %>" method="post">
+  <%= auth_token_input %>
+  <input type="hidden" name="_method" value="patch">
+
+  <label>
+    Title
+    <input type="text" name="todo[title]" value="<%= @todo.title %>">
+  </label>
+
+  <label>
+    Body
+    <input type="textarea" name="todo[url]" value="<%= @todo.body %>">
+  </label>
+
+  <input type="submit" value="Update Link">
+</form>
