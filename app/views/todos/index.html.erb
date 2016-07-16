@@ -2,8 +2,8 @@
 <h1>Todos</h1>
 
 <ul>
-  <% @links.each do |todo|%>
-    <li><%= link_to todo.title, link_url(todo) %> : <%= todo.body %></li>
+  <% @todos.each do |todo|%>
+    <li><%= link_to todo.title, todo_url(todo) %> : <%= todo.body %></li>
   <% end %>
 </ul>
 

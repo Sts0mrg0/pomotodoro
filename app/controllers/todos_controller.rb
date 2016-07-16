@@ -17,7 +17,7 @@ class TodosController < ApplicationController
     @todo = Todo.new(todo_params)
     @todo.user_id = current_user.id
     if @todo.save
-      redirect_to todo_url(@todo)
+      redirect_to todos_url(@todo)
     else
       flash.now[:errors] = @todo.errors.full_messages
       render :new
@@ -46,6 +46,6 @@ class TodosController < ApplicationController
 
   private
   def todo_params
-    params.require(:todo).permit(:title, :url)
+    params.require(:todo).permit(:title, :body)
   end
 end
