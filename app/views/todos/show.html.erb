@@ -5,3 +5,4 @@
 <%= link_to "Edit Todo", edit_todo_url(@todo) %>
 <%= link_to "Todos", todos_url %>
 <%= button_to "Remove Todo", todo_url, method: :delete %>
+<%= button_tag "Do It" type: 'button', onclick: "myFunction()", class: 'btn btn-default' do %>
