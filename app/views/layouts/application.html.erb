@@ -9,14 +9,18 @@
 </head>
 <body>
   <div class="title">
-    <h1>PomoTodoro</h1>
+    <h1>pomo<qq>ToDo</qq>ro</h1>
   </div>
 <% if signed_in? %>
+<div class="username">
   <%= current_user.username %>
+</div>
   <%= button_to "Sign Out", session_url, :method => :delete %>
 <% else %>
+<div class="sign">
   <%= link_to "Sign In", new_session_url %>
-  <%= link_to "Sign Up", new_user_url %>
+  <%= link_to "Sign Up", new_user_url%>
+</div>
 <% end %>
 
 <br>
