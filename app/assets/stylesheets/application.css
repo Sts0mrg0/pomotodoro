@@ -13,3 +13,20 @@
  *= require_tree .
  *= require_self
  */
+ #defaultCountdown {
+     background-color: #232323;
+     width: 757px;
+     height: 60px;
+     line-height: 60px;
+     border-radius: 5px;
+ }
+ .hasCountdown {
+     text-align: center;
+     margin-left: 20px;
+     margin-right: 20px;
+     color: #E5E5E5;
+     margin-top: 45px;
+     font-size: 26px;
+     font-weight: normal;
+     font-family: Georgia, "Times New Roman", Times, serif;
+ }
