@@ -16,11 +16,7 @@
   <%= current_user.username %>
 </div>
   <%= button_to "Sign Out", session_url, :method => :delete %>
-<% else %>
-<div class="sign">
-  <%= link_to "Sign In", new_session_url %>
-  <%= link_to "Sign Up", new_user_url%>
-</div>
+
 <% end %>
 
 <br>
