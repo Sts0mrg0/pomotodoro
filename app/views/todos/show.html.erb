@@ -1,34 +1,44 @@
-<h2><%= @todo.title %></h2>
-<%= @todo.body %>
-<%= @todo.pomodoros %>
+<div class="new">
+  <h2><%= @todo.title %></h2>
+  <h3><%= @todo.body %></h3><br>
+  <h3><%= "Pomodoros: " + @todo.pomodoros.to_s %></h3><br><br>
+  <div class="showlinks">
+    <c class="indexlink">
+      <%= link_to "All Todos", todos_url %>
+    </c>
+    <c class="editlink">
+      <%= link_to "Edit", edit_todo_url(@todo) %>
+    </c>
+    <c class="deletelink">
+      <%= link_to "Delete", todo_url, method: :delete %>
+    </c>
+  </div>
 
-<%= link_to "Edit Todo", edit_todo_url(@todo) %>
-<%= link_to "Todos", todos_url %>
-<%= button_to "Remove Todo", todo_url, method: :delete %>
-<form action="<%= todo_url(@todo)/increment %>" method="post">
   <input type="submit" value="New Pomodoro" onclick="window.location = '/increment'">
-</form>
-<script type="text/javascript">
-function clock(){
-  var time = 5;
-  var myVar = setInterval(function() {
-    myTimer(time)
-    time -= 1;
-    if (time < 0) {
-      clearInterval(myVar);
-    }
-  }, 1000);
+  <script type="text/javascript">
+  function clock(){
+    var time = 5;
+    var myVar = setInterval(function() {
+      myTimer(time)
+      time -= 1;
+      if (time < 0) {
+        clearInterval(myVar);
+      }
+    }, 1000);
 
-  function myTimer(time) {
-    var minutes = Math.floor(time / 60);
-    var seconds = time % 60;
-    document.querySelector('[data-minutes]').innerHTML = minutes;
-    document.querySelector('[data-seconds]').innerHTML = seconds;
+    function myTimer(time) {
+      var minutes = Math.floor(time / 60);
+      var seconds = time % 60;
+      if (seconds < 10) {
+        seconds = "0" + seconds;
+      }
+      var result = minutes + ":" + seconds;
+      document.querySelector('[data-seconds]').innerHTML = result;
+    }
   }
-}
   </script>
 
   <div id="defaultCountdown" class="hasCountdown">
-      <span data-minutes></span>:
-      <span data-seconds></span>
+    <span data-seconds></span>
   </div>
+</div>

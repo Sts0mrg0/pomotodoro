@@ -49,12 +49,41 @@
    position: relative;
    top: 100px;
  }
-
+.newsubmit{
+  position: relative;
+  right: 30px;
+}
  .new h2{
    text-align: center;
    font-size: 24px;
    position: relative;
    bottom: 50px;
+   color: #555;
+ }
+
+ .showlinks{
+   text-align: center;
+   position: relative;
+   width: 300px;
+   right: 50px;
+   bottom: 50px;
+   font-size: 17px;
+   color: #df142c;
+ }
+
+ .editlink{
+   margin-right: 40px;
+ }
+
+ .indexlink{
+   margin-right: 40px;
+ }
+
+ .new h3{
+   text-align: center;
+   position: relative;
+   bottom: 50px;
+   padding-top: 10px;
  }
  .newtodo{
    text-align: center;
@@ -107,10 +136,6 @@
    top: 20px;
  }
 
- .formname{
-
- }
-
  .forminput{
    border-radius: 3px;
    border-style: solid;
@@ -153,18 +178,16 @@
    top: 150px;
  }
  #defaultCountdown {
-     background-color: #232323;
-     width: 757px;
+
      height: 60px;
      line-height: 60px;
      border-radius: 5px;
  }
  .hasCountdown {
      text-align: center;
-     margin-left: 20px;
-     margin-right: 20px;
+     position: relative;
+     bottom: 300px;
      color: #E5E5E5;
-     margin-top: 45px;
      font-size: 26px;
      font-weight: normal;
      font-family: Georgia, "Times New Roman", Times, serif;
