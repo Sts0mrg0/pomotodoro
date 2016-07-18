@@ -1,7 +1,12 @@
 <div class="new">
   <h2><%= @todo.title %></h2>
   <h3><%= @todo.body %></h3><br>
-  <h3><%= "Pomodoros: " + @todo.pomodoros.to_s %></h3><br><br>
+  <h3 class="pomo"><%= "Pomodoros: " + @todo.pomodoros.to_s %></h3><br><br>
+
+
+  <input class="formbuttonshow" type="submit" value="New Pomodoro" onclick="clock();">
+
+
   <div class="showlinks">
     <c class="indexlink">
       <%= link_to "All Todos", todos_url %>
@@ -14,7 +19,6 @@
     </c>
   </div>
 
-  <input type="submit" value="New Pomodoro" onclick="window.location = '/increment'">
   <script type="text/javascript">
   function clock(){
     var time = 5;

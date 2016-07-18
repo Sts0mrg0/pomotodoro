@@ -66,10 +66,12 @@
    position: relative;
    width: 300px;
    right: 50px;
-   bottom: 50px;
+   bottom: 30px;
    font-size: 17px;
    color: #df142c;
  }
+
+
 
  .editlink{
    margin-right: 40px;
@@ -136,6 +138,31 @@
    top: 20px;
  }
 
+ .formbuttonshow{
+   background-color: #cb1218;
+   border-radius: 3px;
+   border-style: solid;
+   border-width: 1px;
+   border-color: #cb1218;
+   padding: 8px;
+   font-family: sans-serif;
+   font-size: 15px;
+   color: white;
+   position: relative;
+   left: 51px;
+   bottom: 60px;
+ }
+
+ .pomo{
+   font-size: 18px;
+ }
+
+ .help {
+   position: relative;
+   bottom: 500px;
+
+ }
+
  .forminput{
    border-radius: 3px;
    border-style: solid;
@@ -187,7 +214,7 @@
      text-align: center;
      position: relative;
      bottom: 300px;
-     color: #E5E5E5;
+     color: #330101;
      font-size: 26px;
      font-weight: normal;
      font-family: Georgia, "Times New Roman", Times, serif;
