@@ -1,6 +1,6 @@
 
 <div class="signup">
-  <h2>Sign Up</h2>
+
   <form action="<%= users_url %>" method="post">
     <%= auth_token_input %>
     <label class="formname">
@@ -16,6 +16,6 @@
     <input class="formbutton" type="submit" value="Sign Up">
   </form>
   <div class="sign">
-    Already a member? <%= link_to "Sign In", new_session_url %>
+    Already a member? <c class="link"> <%= link_to "Sign In", new_session_url %></c>
   </div>
 </div>

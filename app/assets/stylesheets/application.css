@@ -138,6 +138,11 @@
    top: 20px;
  }
 
+ .editsubmit{
+   position: relative;
+   right: 20px;
+ }
+
  .formbuttonshow{
    background-color: #cb1218;
    border-radius: 3px;
@@ -197,12 +202,16 @@
  }
 
  .sign{
-   color: #45c7ff;
-   font-size: 20px;
+   color: black;
+   font-size: 17px;
    text-align: center;
    font-family: sans-serif;
    position: relative;
-   top: 150px;
+   top: 50px;
+ }
+
+ .link{
+   color: #b82b38;
  }
  #defaultCountdown {
 
