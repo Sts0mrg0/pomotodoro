@@ -5,10 +5,9 @@
 <%= link_to "Edit Todo", edit_todo_url(@todo) %>
 <%= link_to "Todos", todos_url %>
 <%= button_to "Remove Todo", todo_url, method: :delete %>
-<form action="<%= todo_url(@todo) %>" method="post">
-
+<form action="<%= todo_url(@todo)/increment %>" method="post">
+  <input type="submit" value="New Pomodoro" onclick="window.location = '/increment'">
 </form>
-<input type="button" value="New Pomodoro" onclick="clock();">
 <script type="text/javascript">
 function clock(){
   var time = 5;

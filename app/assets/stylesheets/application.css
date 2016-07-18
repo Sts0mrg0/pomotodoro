@@ -13,6 +13,71 @@
  *= require_tree .
  *= require_self
  */
+ .index {
+   font-family: sans-serif;
+   font-weight: lighter;
+ }
+
+ .loggedin{
+   font-family: sans-serif;
+   font-weight: lighter;
+   position: relative;
+   left: 50px;
+   bottom: 50px;
+ }
+
+ .signout{
+   position:relative;
+   top: 10px;
+   color: rgb(221, 11, 80);
+ }
+
+ .index h1{
+   text-align: center;
+   font-size: 28px;
+   margin-bottom: 25px;
+ }
+
+ .new{
+   font-family: sans-serif;
+   font-weight: lighter;
+   font-size: 12px;
+   color: #aaa;
+   width: 215px;
+   margin-left: auto;
+   margin-right: auto;
+   position: relative;
+   top: 100px;
+ }
+
+ .new h2{
+   text-align: center;
+   font-size: 24px;
+   position: relative;
+   bottom: 50px;
+ }
+ .newtodo{
+   text-align: center;
+   font-size: 16px;
+   color: rgb(221, 11, 80);
+   padding: 10px;
+   width:100px;;
+   margin-right: auto;
+   margin-left: auto;
+ }
+
+ .todo{
+   transition: color 1s ease;
+   width:200px;
+   margin-left: auto;
+   margin-right: auto;
+   text-align: center;
+   padding-bottom: 15px;
+ }
+
+ .todo:hover{
+   color: red;
+ }
 
  .title{
    font-size: 60px;

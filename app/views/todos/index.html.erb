@@ -1,10 +1,12 @@
+<div class="index">
+  <h1>All ToDos</h1>
 
-<h1>Todos</h1>
-
-<ul>
-  <% @todos.each do |todo|%>
-    <li><%= link_to todo.title, todo_url(todo) %> : <%= todo.body %></li>
-  <% end %>
-</ul>
-
-<%= link_to "New Todo", new_todo_url %>
+  <ul class="todos">
+    <% @todos.each do |todo|%>
+    <li class="todo"><%= link_to todo.title, todo_url(todo) %> </li>
+    <% end %>
+  </ul>
+  <div class="newtodo">
+    <%= link_to "New ToDo", new_todo_url %>
+  </div>
+</div>

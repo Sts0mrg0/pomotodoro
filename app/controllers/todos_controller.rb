@@ -13,6 +13,12 @@ class TodosController < ApplicationController
     @todo = Todo.new
   end
 
+  def increment
+    @todo = current_user.todos.find(params[:id])
+    @todo.pomodoros += 1
+    redirect_to todo_url(@todo)
+  end
+
   def create
     @todo = Todo.new(todo_params)
     @todo.user_id = current_user.id

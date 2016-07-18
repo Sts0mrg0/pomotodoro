@@ -12,10 +12,14 @@
     <h1>pomo<qq>ToDo</qq>ro</h1>
   </div>
 <% if signed_in? %>
-<div class="username">
-  <%= current_user.username %>
+<div class="loggedin">
+  <div class="username">
+    <%= "Welcome, " + current_user.username %>
+  </div>
+  <div class="signout">
+    <%= link_to "Sign Out", session_url, :method => :delete %>
+  </div>
 </div>
-  <%= button_to "Sign Out", session_url, :method => :delete %>
 
 <% end %>
 

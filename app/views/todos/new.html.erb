@@ -1,17 +1,19 @@
-<h2>New Todo</h2>
 
-<form action="<%= todos_url %>" method="post">
-  <%= auth_token_input %>
+<div class="new">
+  <h2>Create New Todo</h2>
+  <form action="<%= todos_url %>" method="post">
+    <%= auth_token_input %>
 
-  <label>
-    Title<br>
-    <input class="forminput" type="text" name="todo[title]" value="<%= @todo.title %>" id="title">
-  </label><br><br>
+    <label>
+      Title<br>
+      <input class="forminput" type="text" name="todo[title]" value="<%= @todo.title %>" id="title">
+    </label><br><br>
 
-  <label>
-    Body<br>
-    <input class="forminput"type="textarea" name="todo[body]" value="<%= @todo.body %>" id="body">
-  </label><br><br>
+    <label>
+      Description<br>
+      <input class="forminput"type="textarea" name="todo[body]" value="<%= @todo.body %>" id="body">
+    </label><br><br>
 
-  <input class="formbutton" type="submit" value="Create New Todo">
-</form>
+    <input class="formbutton" type="submit" value="Create New Todo">
+  </form>
+</div>
