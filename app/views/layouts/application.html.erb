@@ -5,20 +5,7 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-  <script type="text/javascript">
-  var time = 1500;
-    var myVar = setInterval(function() {
-      myTimer(time)
-      time -= 1;
-    }, 1000);
 
-    function myTimer(time) {
-      var minutes = Math.floor(time / 60);
-      var seconds = time % 60;
-      document.querySelector('[data-minutes]').innerHTML = minutes;
-      document.querySelector('[data-seconds]').innerHTML = seconds;
-    }
-    </script>
 </head>
 <body>
   <div class="title">
@@ -37,9 +24,6 @@
 <%= render "layouts/errors" %>
 
 <%= yield %>
-<div id="defaultCountdown" class="hasCountdown">
-    <span data-minutes></span>:
-    <span data-seconds></span>
-</div>
+
 </body>
 </html>

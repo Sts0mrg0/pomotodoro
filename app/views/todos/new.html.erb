@@ -4,14 +4,14 @@
   <%= auth_token_input %>
 
   <label>
-    Title
-    <input type="text" name="todo[title]" value="<%= @todo.title %>" id="title">
-  </label>
+    Title<br>
+    <input class="forminput" type="text" name="todo[title]" value="<%= @todo.title %>" id="title">
+  </label><br><br>
 
   <label>
-    Body
-    <input type="textarea" name="todo[body]" value="<%= @todo.body %>" id="body">
-  </label>
+    Body<br>
+    <input class="forminput"type="textarea" name="todo[body]" value="<%= @todo.body %>" id="body">
+  </label><br><br>
 
-  <input type="submit" value="Create New Todo">
+  <input class="formbutton" type="submit" value="Create New Todo">
 </form>

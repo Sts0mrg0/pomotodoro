@@ -6,14 +6,14 @@
   <input type="hidden" name="_method" value="patch">
 
   <label>
-    Title
-    <input type="text" name="todo[title]" value="<%= @todo.title %>">
-  </label>
+    Title <br>
+    <input class="forminput" type="text" name="todo[title]" value="<%= @todo.title %>">
+  </label><br><br>
 
   <label>
-    Body
-    <input type="textarea" name="todo[body]" value="<%= @todo.body %>">
-  </label>
+    Body<br>
+    <input class="forminput" type="textarea" name="todo[body]" value="<%= @todo.body %>">
+  </label><br><br>
 
-  <input type="submit" value="Update Todo">
+  <input class="formbutton" type="submit" value="Update Todo">
 </form>
