@@ -4,7 +4,7 @@
   <h3 class="pomo"><%= "Pomodoros: " + @todo.pomodoros.to_s %></h3><br><br>
 
 
-  <input class="formbuttonshow" type="submit" value="New Pomodoro" onclick="clock();">
+  <input class="formbuttonshow" type="submit" value="New Pomodoro" onclick="clearClock(); clock();">
 
 
   <div class="showlinks">
@@ -20,6 +20,9 @@
   </div>
 
   <script type="text/javascript">
+  function clearClock(){
+    clearInterval(myVar);
+  }
   function clock(){
     var time = 1500;
     var myVar = setInterval(function() {
