@@ -31,6 +31,7 @@
       myTimer(time)
       time -= 1;
       if (time < 0) {
+        window.alert("Pomodoro finished, take a 5 minute break.")
         clearInterval(myVar);
         $.ajax({
           url: '/todos/' + id + "/increment",
