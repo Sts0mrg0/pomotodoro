@@ -15,7 +15,7 @@ and JavaScript can smoothly interact with one another.
 The most technically difficult thing about this project was getting the Pomodoro incrementer
 to synchronize with the countdown clock. I decided to increment the Pomodoro counter once the clock
 expired in order to have a true reflection of how many Pomodoros a user has completed. When the
-timer expires, an AJAX request is made to have the Pomodoro count increase by one. 
+timer expires, an AJAX request is made to have the Pomodoro count increase by one.
 
 ###Features
 * Sign up/in
