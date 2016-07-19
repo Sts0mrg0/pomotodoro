@@ -2,71 +2,34 @@
 
 Pomotodoro is a web application based around the Pomodoro technique
 that allows users to create "ToDos" and keep track of
-how many pomodoros they've accumulated for a particular task. 
+how many Pomodoros they've accumulated for a particular task.
 
 
 ###Technical Details:
-TunedIn allows for users to create a custom profile page,
-detail their experience and education, connect with
-other users, and create posts. Information from the database is rendered in JSON.
+Pomotodoro was built using Ruby on Rails, JavaScript, and jQuery. Two database tables were used in building this app; a Users table which stores user information such as username and password digest,
+and a Todos table that stores each Todo's title, description, user id, and Pomodoro count.
 
-The following table illustrates how I implemented making connections:
+I decided to implement the countdown timer purely in JavaScript in order to demonstrate how Rails
+and JavaScript can smoothly interact with one another.
 
-## connections
-column name      | data type | details
------------------|-----------|-----------------------
-id               | integer   | not null, primary key
-connector_id     | integer   | not null, foreign key (references users), indexed
-connectee_id     | string    | not null
-status           | string    | not null, default: pending
-
-
-I made it a priority to avoid duplicating data. Accordingly, this table encapsulates both
-connection requests and made connections. To do that I had to create
-a variety of associations to figure who made the request, who could accept it,
-and who would get a notification as a result. It seemed a bit daunting at the
-beginning, but after I wrapped my head around it I realized it's not so complicated.
+The most technically difficult thing about this project was getting the Pomodoro incrementer
+to synchronize with the countdown clock. I decided to increment the Pomodoro counter once the clock
+expired in order to have a true reflection of how many Pomodoros a user has completed. When the
+timer expires, an AJAX request is made to have the Pomodoro count increase by one. 
 
 ###Features
-* Sign up/in with email or Twitter
-* Build a custom profile page and present your experience and education
-* Connect with other users
-* Create posts that only will only be seen by your connections
-* Receive notifications when users request to connect with you
-* Search for other users and visit their profile
-* Upload custom profile pictures
+* Sign up/in
+* Create, view, edit, and delete Todos
+* Start a Pomodoro timer
+* When Pomodoro is finished, user is alerted and Pomodoro counter is incremented
 
 ###Languages
 * JavaScript
+* jQuery
 * Ruby
 * SQL
 * HTML
 * CSS
 
 ###Frameworks
-
-* React.js
 * Rails
-
-###Libraries and Technologies
-
-* BCrypt
-* Flux
-* Paperclip
-* PostgreSQL
-* Figaro
-* Twitter-OmniAuth
-  * React Router
-  * Webpack
-  * Heroku
-
-###To-Do:
-* [ ] Allow users to comment on posts
-* [ ] Create a jobs page where users can post and apply to jobs
-* [ ] Display advertisements
-* [ ] Add more components to profile (skills, endorsements)
-* [ ] Upload documents (pictures, links, presentations, videos)
-* [ ] Allow users to send private messages to connections
-* [ ] Allow users to attach links / videos to posts
-
-[Original Design Docs](./docs/README.md)

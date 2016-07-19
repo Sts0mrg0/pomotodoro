@@ -189,6 +189,16 @@
    top: 100px;
  }
 
+ .errors{
+   font-family: sans-serif;
+   font-weight: lighter;
+   font-size: 12px;
+   color: #aaa;
+   text-align: center;
+   position: relative;
+   top: 50px;
+ }
+
  .hidden{
    visibility: hidden;
  }
