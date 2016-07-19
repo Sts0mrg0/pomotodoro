@@ -8,7 +8,7 @@
     <input type="hidden" name="_method" value="patch">
   </form>
 
-  <input class="formbuttonshow" type="submit" value="New Pomodoro" onclick="clock();">
+  <input id='startbutton' class="formbuttonshow" type="submit" value="New Pomodoro" onclick="clock();">
 
   <div class="showlinks">
     <c class="indexlink">
@@ -24,12 +24,18 @@
 
   <script type="text/javascript">
   function clock(){
-    var time = 5;
+    var time = 1500;
+    var id = <%= @todo[:id] %>
+    document.getElementById('startbutton').className = "hidden";
     var myVar = setInterval(function() {
       myTimer(time)
       time -= 1;
       if (time < 0) {
         clearInterval(myVar);
+        $.ajax({
+          url: '/todos/' + id + "/increment",
+          type: 'PATCH'
+        })
       }
     }, 1000);
 

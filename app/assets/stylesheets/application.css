@@ -189,6 +189,10 @@
    top: 100px;
  }
 
+ .hidden{
+   visibility: hidden;
+ }
+
  .signup{
    font-family: sans-serif;
    font-weight: lighter;
