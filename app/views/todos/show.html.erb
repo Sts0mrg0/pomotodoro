@@ -6,9 +6,9 @@
   <form class="" action= "<%= increment_todo_url(@todo) %>" method="post">
     <%= auth_token_input %>
     <input type="hidden" name="_method" value="patch">
-    <input class="formbuttonshow" type="submit" value="New Pomodoro" onclick="clock();">
   </form>
 
+  <input class="formbuttonshow" type="submit" value="New Pomodoro" onclick="clock();">
 
   <div class="showlinks">
     <c class="indexlink">
@@ -24,7 +24,7 @@
 
   <script type="text/javascript">
   function clock(){
-    var time = 1500;
+    var time = 5;
     var myVar = setInterval(function() {
       myTimer(time)
       time -= 1;
