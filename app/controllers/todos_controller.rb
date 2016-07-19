@@ -3,19 +3,23 @@ class TodosController < ApplicationController
 
   def index
     @todos = Todo.all
+
   end
 
   def show
     @todo = Todo.find(params[:id])
+
   end
 
   def new
     @todo = Todo.new
+
   end
 
   def increment
     @todo = current_user.todos.find(params[:id])
     @todo.pomodoros += 1
+    @todo.save
     redirect_to todo_url(@todo)
   end
 

@@ -3,8 +3,11 @@
   <h3><%= @todo.body %></h3><br>
   <h3 class="pomo"><%= "Pomodoros: " + @todo.pomodoros.to_s %></h3><br><br>
 
-
-  <input class="formbuttonshow" type="submit" value="New Pomodoro" onclick="clearClock(); clock();">
+  <form class="" action= "<%= increment_todo_url(@todo) %>" method="post">
+    <%= auth_token_input %>
+    <input type="hidden" name="_method" value="patch">
+    <input class="formbuttonshow" type="submit" value="New Pomodoro" onclick="clock();">
+  </form>
 
 
   <div class="showlinks">
@@ -20,9 +23,6 @@
   </div>
 
   <script type="text/javascript">
-  function clearClock(){
-    clearInterval(myVar);
-  }
   function clock(){
     var time = 1500;
     var myVar = setInterval(function() {
