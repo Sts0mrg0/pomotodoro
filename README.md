@@ -10,12 +10,12 @@ Pomotodoro was built using Ruby on Rails, JavaScript, and jQuery. Two database t
 and a Todos table that stores each Todo's title, description, user id, and Pomodoro count.
 
 I decided to implement the countdown timer purely in JavaScript in order to demonstrate how Rails
-and JavaScript can smoothly interact with one another.
+and JavaScript can work together to create dynamic web pages.
 
 The most technically difficult thing about this project was getting the Pomodoro incrementer
-to synchronize with the countdown clock. I decided to increment the Pomodoro counter once the clock
+to synchronize with the countdown timer. I decided to increment the Pomodoro counter once the clock
 expired in order to have a true reflection of how many Pomodoros a user has completed. When the
-timer expires, an AJAX request is made to have the Pomodoro count increase by one.
+timer expires the user is alerted via a popup, then an AJAX request is made to have the Pomodoro count increase by one.
 
 ###Features
 * Sign up/in
